@@ -17,9 +17,9 @@ RUN apt-get install -y wget git inkscape locales sudo python3-pygments make
 # Draw.io for building figures
 ENV DRAWIO_VERSION=26.0.9
 RUN apt-get install -y xvfb libnotify4 libxss1 xdg-utils libsecret-1-0 libappindicator3-1 libgbm1
-RUN wget https://github.com/jgraph/drawio-desktop/releases/download/v$DRAWIO_VERSION/drawio-amd64-$DRAWIO_VERSION.deb && \
-    dpkg -i drawio-amd64-$DRAWIO_VERSION.deb && \
-    rm drawio-amd*
+RUN wget https://github.com/jgraph/drawio-desktop/releases/download/v$DRAWIO_VERSION/drawio-arm64-$DRAWIO_VERSION.deb && \
+    dpkg -i drawio-arm64-$DRAWIO_VERSION.deb && \
+    rm drawio-arm*
 
 COPY drawio-cli /usr/bin/drawio-cli
 RUN chmod +x /usr/bin/drawio-cli
