@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.5.2">
+  <diagram name="Page-1" id="Mp4qxl4u3dfNtDBe53xb">
+    <mxGraphModel dx="826" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="047Q2a8EVeKZVzoxquZn-19" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="047Q2a8EVeKZVzoxquZn-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-20" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" target="047Q2a8EVeKZVzoxquZn-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-23" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="047Q2a8EVeKZVzoxquZn-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-26" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="047Q2a8EVeKZVzoxquZn-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-27" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="047Q2a8EVeKZVzoxquZn-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-28" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="047Q2a8EVeKZVzoxquZn-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Processeur&lt;/div&gt;&lt;div&gt;ESP32&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="340" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-21" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Antenne PCB&lt;/div&gt;&lt;div&gt;ESP32&lt;/div&gt;" vertex="1">
+          <mxGeometry height="35" width="80" x="210" y="132.5" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Carte SD" vertex="1">
+          <mxGeometry height="30" width="70" x="469" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-18" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="047Q2a8EVeKZVzoxquZn-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RTC" vertex="1">
+          <mxGeometry height="20" width="40" x="380" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-24" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="047Q2a8EVeKZVzoxquZn-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DAC" vertex="1">
+          <mxGeometry height="30" width="50" x="440" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-25" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="047Q2a8EVeKZVzoxquZn-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Amplificateur audio" vertex="1">
+          <mxGeometry height="40" width="80" x="520" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Batterie" vertex="1">
+          <mxGeometry height="30" width="70" x="110" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Fuel Gauge" vertex="1">
+          <mxGeometry height="30" width="80" x="105" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Battery Charger IC" vertex="1">
+          <mxGeometry height="40" width="80" x="220" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Écran OLED" vertex="1">
+          <mxGeometry height="30" width="80" x="490" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Port USB-C" vertex="1">
+          <mxGeometry height="30" width="80" x="200" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Croix directionnelle&lt;/div&gt;&lt;div&gt;4 boutons&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="410" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Sélection/Annulation&lt;/div&gt;&lt;div&gt;2 boutons&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="120" x="405" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Contrôle volume&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="415" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Jack 3.5 mm" vertex="1">
+          <mxGeometry height="30" width="80" x="630" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Régulateur de tension 3.3V&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="90" x="90" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="047Q2a8EVeKZVzoxquZn-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Protection batterie&lt;/div&gt;&lt;div&gt;Superviseur de tension&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="110" x="320" y="535" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
