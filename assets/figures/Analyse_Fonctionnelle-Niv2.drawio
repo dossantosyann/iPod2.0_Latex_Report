@@ -68,7 +68,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="047Q2a8EVeKZVzoxquZn-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="RTC" vertex="1">
-          <mxGeometry height="20" width="40" x="394" y="70" as="geometry" />
+          <mxGeometry height="20" width="40" x="394" y="50" as="geometry" />
         </mxCell>
         <mxCell id="047Q2a8EVeKZVzoxquZn-24" edge="1" parent="1" source="047Q2a8EVeKZVzoxquZn-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="047Q2a8EVeKZVzoxquZn-7" value="">
           <mxGeometry relative="1" as="geometry" />
