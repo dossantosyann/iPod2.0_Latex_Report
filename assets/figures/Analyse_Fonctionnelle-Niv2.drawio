@@ -145,7 +145,7 @@
         </mxCell>
         <mxCell id="_phoSRs5qI4zYp-uB8xc-25" connectable="0" parent="_phoSRs5qI4zYp-uB8xc-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Vsys&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.3993" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="2" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="047Q2a8EVeKZVzoxquZn-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Battery Charger IC" vertex="1">
