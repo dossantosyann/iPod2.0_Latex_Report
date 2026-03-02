@@ -20,6 +20,24 @@ Et finalement le restant des composants sera choisi.
 \subsection{Écran}
 
 \subsection{Batterie}
+Pour déterminer la capacité de la batterie, il faut se baser sur la consommation maximale des gros consommateurs et de de l'autonomie souhaitée. Dans ce cas, les gros consommateurs sont l'écran, le micro-contrôleur, le DAC et l'amplificateur.
+
+Voici la consommation maximale de ces composants selon le datasheet :
+
+\begin{itemize}
+    \item Écran OLED : $\sim$ 60 mA max.
+    \item DAC : $\sim$ 20 mA max.
+    \item Amplificateur audio : $\sim$ 25 mA max.
+    \item Microcontrôleur ESP32 : $\sim$ Bonjour.
+\end{itemize}
+
+\subsection{DAC}
+Le choix d'un DAC se fait principalement sur les caractéristiques suivantes :
+
+\begin{itemize}
+    \item Résolution en bit
+    \item Frequence d'échantillonnage en Hz
+\end{itemize}
 
 \subsection{Boutons}
 
