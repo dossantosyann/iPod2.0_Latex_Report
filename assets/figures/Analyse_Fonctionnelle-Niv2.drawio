@@ -62,7 +62,7 @@
         <mxCell id="mWaRPkYXV2c9awh6F8o4-14" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="mWaRPkYXV2c9awh6F8o4-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="InfD0HFL66ZjcEA0G4re-4" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0/3.3 V" vertex="1">
+        <mxCell id="InfD0HFL66ZjcEA0G4re-4" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="I/O" vertex="1">
           <mxGeometry relative="1" x="-0.3549" y="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -103,7 +103,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="InfD0HFL66ZjcEA0G4re-3" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Tension&lt;/div&gt;" vertex="1">
+        <mxCell id="InfD0HFL66ZjcEA0G4re-3" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Signal&lt;/div&gt;&lt;div&gt;analogique&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.276" as="geometry">
             <mxPoint x="2" y="-3" as="offset" />
           </mxGeometry>
@@ -117,7 +117,7 @@
         <mxCell id="mWaRPkYXV2c9awh6F8o4-24" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B266FF;" target="mWaRPkYXV2c9awh6F8o4-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="InfD0HFL66ZjcEA0G4re-7" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Tension" vertex="1">
+        <mxCell id="InfD0HFL66ZjcEA0G4re-7" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Signal analogique" vertex="1">
           <mxGeometry relative="1" x="-0.0368" as="geometry">
             <mxPoint y="-3" as="offset" />
           </mxGeometry>
@@ -171,7 +171,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="InfD0HFL66ZjcEA0G4re-8" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-32" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Tension" vertex="1">
+        <mxCell id="InfD0HFL66ZjcEA0G4re-8" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-32" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Signal&lt;/div&gt;&lt;div&gt;analogique&lt;/div&gt;&lt;div&gt;stéréo&lt;/div&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1361" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -180,10 +180,13 @@
           <mxGeometry height="25" width="86" x="490" y="605" as="geometry" />
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Jack 3.5 mm" vertex="1">
-          <mxGeometry height="30" width="86" x="490" y="670" as="geometry" />
+          <mxGeometry height="30" width="86" x="490" y="700" as="geometry" />
         </mxCell>
         <mxCell id="InfD0HFL66ZjcEA0G4re-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="rajouter chip USB to UART pour flash" vertex="1">
           <mxGeometry height="40" width="80" x="80" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="InfD0HFL66ZjcEA0G4re-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="DAC + Ampli intérgré plus facile" vertex="1">
+          <mxGeometry height="30" width="90" x="640" y="370" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
