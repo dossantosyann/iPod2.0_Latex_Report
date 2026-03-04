@@ -112,7 +112,7 @@
           <mxGeometry height="60" width="120" x="473" y="445" as="geometry" />
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Carte SD" vertex="1">
-          <mxGeometry height="40" width="90" x="522" y="130" as="geometry" />
+          <mxGeometry height="40" width="90" x="522" y="120" as="geometry" />
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-24" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B266FF;" target="mWaRPkYXV2c9awh6F8o4-22">
           <mxGeometry relative="1" as="geometry" />
@@ -149,6 +149,11 @@
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-30" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=light-dark(#5DC3FF,#60C9E9);startArrow=classic;startFill=1;" target="mWaRPkYXV2c9awh6F8o4-23" value="">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="InfD0HFL66ZjcEA0G4re-12" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;SPI&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0306" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Protections" vertex="1">
           <mxGeometry height="25" width="86" x="524" y="200" as="geometry" />
