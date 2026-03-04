@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.6.0">
   <diagram name="Page-1" id="Mp4qxl4u3dfNtDBe53xb">
-    <mxGraphModel dx="1722" dy="966" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="826" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -128,8 +128,13 @@
         <mxCell id="mWaRPkYXV2c9awh6F8o4-26" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#5DC3FF;" target="mWaRPkYXV2c9awh6F8o4-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="InfD0HFL66ZjcEA0G4re-13" connectable="0" parent="mWaRPkYXV2c9awh6F8o4-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="I2C/SPI" vertex="1">
+          <mxGeometry relative="1" x="-0.0907" y="-5" as="geometry">
+            <mxPoint x="4" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="RTC" vertex="1">
-          <mxGeometry height="30" width="55" x="414" y="260" as="geometry" />
+          <mxGeometry height="30" width="55" x="414" y="245" as="geometry" />
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-28" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#D52E2E;" target="mWaRPkYXV2c9awh6F8o4-9">
           <mxGeometry relative="1" as="geometry">
@@ -177,8 +182,8 @@
         <mxCell id="mWaRPkYXV2c9awh6F8o4-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Jack 3.5 mm" vertex="1">
           <mxGeometry height="30" width="86" x="490" y="670" as="geometry" />
         </mxCell>
-        <mxCell id="mWaRPkYXV2c9awh6F8o4-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="iPod 2.0" vertex="1">
-          <mxGeometry height="30" width="60" x="382.5" y="220" as="geometry" />
+        <mxCell id="InfD0HFL66ZjcEA0G4re-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="rajouter chip USB to UART pour flash" vertex="1">
+          <mxGeometry height="40" width="80" x="80" y="510" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
