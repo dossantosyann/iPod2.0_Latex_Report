@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.6.0">
   <diagram name="Page-1" id="Mp4qxl4u3dfNtDBe53xb">
-    <mxGraphModel dx="1425" dy="799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="984" dy="552" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,7 +24,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Port USB-C" vertex="1">
-          <mxGeometry height="30" width="86" x="245.5" y="762.5" as="geometry" />
+          <mxGeometry height="30" width="86" x="245.75" y="772.5" as="geometry" />
         </mxCell>
         <mxCell id="InfD0HFL66ZjcEA0G4re-30" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#D52E2E;">
           <mxGeometry relative="1" as="geometry">
@@ -95,8 +95,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="310" y="650" />
-              <mxPoint x="370" y="650" />
-              <mxPoint x="370" y="525" />
+              <mxPoint x="380" y="650" />
+              <mxPoint x="380" y="525" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -106,7 +106,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Protections" vertex="1">
-          <mxGeometry height="25" width="86" x="245.5" y="680" as="geometry" />
+          <mxGeometry height="25" width="86" x="245.75" y="690" as="geometry" />
         </mxCell>
         <mxCell id="InfD0HFL66ZjcEA0G4re-42" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mWaRPkYXV2c9awh6F8o4-23" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -122,8 +122,8 @@
         <mxCell id="mWaRPkYXV2c9awh6F8o4-32" edge="1" parent="1" source="mWaRPkYXV2c9awh6F8o4-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d80073;strokeColor=#000000;" target="mWaRPkYXV2c9awh6F8o4-34" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="529" y="712.5" />
-              <mxPoint x="529" y="712.5" />
+              <mxPoint x="529.25" y="722.5" />
+              <mxPoint x="529.25" y="722.5" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -133,10 +133,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;rotation=0;" value="Protections" vertex="1">
-          <mxGeometry height="25" width="86" x="486" y="680" as="geometry" />
+          <mxGeometry height="25" width="86" x="486.25" y="690" as="geometry" />
         </mxCell>
         <mxCell id="mWaRPkYXV2c9awh6F8o4-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Jack 3.5 mm" vertex="1">
-          <mxGeometry height="30" width="86" x="486" y="762.5" as="geometry" />
+          <mxGeometry height="30" width="86" x="486.25" y="772.5" as="geometry" />
         </mxCell>
         <mxCell id="InfD0HFL66ZjcEA0G4re-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;Pont USB vers UART&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="230" y="480" as="geometry" />
