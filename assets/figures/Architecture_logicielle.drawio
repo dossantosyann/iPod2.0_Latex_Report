@@ -55,7 +55,7 @@
         <mxCell id="w2nD5Sow4Ii2f2OculWu-83" edge="1" parent="1" source="w2nD5Sow4Ii2f2OculWu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w2nD5Sow4Ii2f2OculWu-5" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="w2nD5Sow4Ii2f2OculWu-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;Queue boutons&lt;/div&gt;ISR GPIO" vertex="1">
+        <mxCell id="w2nD5Sow4Ii2f2OculWu-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;ButtonsQueue&lt;/div&gt;ISR GPIO" vertex="1">
           <mxGeometry height="50" width="120" x="514" y="410" as="geometry" />
         </mxCell>
         <mxCell id="w2nD5Sow4Ii2f2OculWu-80" edge="1" parent="1" source="w2nD5Sow4Ii2f2OculWu-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" target="w2nD5Sow4Ii2f2OculWu-5" value="">
