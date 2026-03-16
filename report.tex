@@ -55,30 +55,30 @@
   \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
 
 
-%% Début du document
+% Début du document
 \begin{document}
 
 \selectlanguage{french}
-%\maketitle
-%\frontmatter
-%\clearemptydoublepage
-%
-%\inputdir[order=natural]{frontmatter}
-%
-%%% Sommaire et tables
-%\clearemptydoublepage
-%{
-% \tableofcontents
-%  \let\cleardoublepage\clearpage
-%  \listoffigures
-%  \let\cleardoublepage\clearpage
-%  \listoftables
-%  \let\cleardoublepage\clearpage
-%  \listoflistings
-%}
+\maketitle
+\frontmatter
+\clearemptydoublepage
 
-%\printnomenclature
-%\clearemptydoublepage
+\inputdir[order=natural]{frontmatter}
+
+% Sommaire et tables
+\clearemptydoublepage
+{
+  \tableofcontents
+  \let\cleardoublepage\clearpage
+  \listoffigures
+  \let\cleardoublepage\clearpage
+  \listoftables
+  \let\cleardoublepage\clearpage
+  \listoflistings
+}
+
+\printnomenclature
+\clearemptydoublepage
 \pagenumbering{arabic}
 
 %% Contenu
@@ -86,24 +86,25 @@
 
 \inputdir[order=natural]{content}
 
-%\clearpage
-%\printbibliography
+\clearpage
+\input{IA.tex}
+\printbibliography
 
-%\appendix
-%\appendixpage
-%\addappheadtotoc
+\appendix
+\appendixpage
+\addappheadtotoc
 
-%\inputdir[order=natural]{appendix}
+\inputdir[order=natural]{appendix}
 
-%\let\cleardoublepage\clearpage
-%\backmatter
+\let\cleardoublepage\clearpage
+\backmatter
 
-%\label{glossaire}
-%\printnoidxglossary
-%\label{index}
-%\printindex
+\label{glossaire}
+\printnoidxglossary
+\label{index}
+\printindex
 
-%\input{backmatter/colophon}
-%\input{backmatter/nomenclature}
+\input{backmatter/colophon}
+\input{backmatter/nomenclature}
 
 \end{document}
