@@ -1,0 +1,67 @@
+\chapter{Concpetion Hardware}
+
+Des outils d'intelligence artificielle ont été utilisés dans ce chapitre pour :
+\begin{itemize}
+    \item Facilier et accélérer la recherche de composants.
+    \item La lecture de datasheet.
+    \item La vérification de compatibilité entre les composants.
+    \item La vérification de l'orthogrpahe et de la grammaire du chapitre.
+    \item La génération de code pour l'affichage de plots.
+\end{itemize}
+Toutes les réponses générée par IA ont été revérifiées manuellement.
+
+Le détail des modèles utilisés se trouve en annexe. \\
+
+\section{Choix des composants}
+
+Cette section traitera le choix des composants. En premier lieu, le micro-contrôleur, qui est le coeur du système, sera choisi.
+
+Ensuite, les composants externes, qui seront visibles depuis l'extérieur du boîtier et avec lesquels l'utilisateur interragira, seront sélectionnés.
+Ces composants doivent être choisi en priorité pour pouvoir par la suite designer le boîtier et connaître la taille finale du PCB à réaliser.
+
+Et finalement le restant des composants sera choisi. \\
+
+\subsection{Micro-contrôleur}
+
+\subsection{Écran}
+
+\subsection{DAC + amplificateur audio}
+Le choix d'un DAC se fait principalement sur les caractéristiques suivantes :
+
+\begin{itemize}
+    \item Résolution en bit
+    \item Frequence d'échantillonnage en Hz
+\end{itemize}
+
+\subsection{Régulateur de tension}
+
+\subsubsection{Mesure de consommation du micro-contrôleur}
+
+Dans le datasheet de l'ESP32-WROVER-E, Espressif ne spécifie pas la consommation du module lors de l'utilisation du Bluetooth pour diffuser une musique. Mais cette information étant essentielle pour choisir correctement le régulateur de tension 3.3 V du système et la capacité de la batterie, une simple mesure de courant a été effectuée. \\
+
+Pour se faire, un circuit avec un ESP32-DevKitC et un module de carte SD a été conçu sur breadbord. Ensuite, un simple code va se connecter en Bluetooth à une enceinte, lire un fichier .WAV depuis la carte SD et diffuser la musique via Bluetooth à l'enceinte. La mesure du courant sera faite avec ampèremètre numérique "Power Profiler Kit II" de chez Nordic Semiconductors. \\
+
+Voici la mesure
+
+
+\subsubsection{Consommation totale}
+Voici la consommation maximale de ces composants selon le datasheet :
+
+\begin{itemize}
+    \item Écran OLED : $\sim$ 60 mA max.
+    \item DAC : $\sim$ 20 mA max.
+    \item Amplificateur audio : $\sim$ 25 mA max.
+    \item Microcontrôleur ESP32 : $\sim$ Bonjour.
+\end{itemize}
+
+\subsection{Batterie}
+Pour déterminer la capacité de la batterie, il faut se baser sur la consommation maximale des gros consommateurs et de de l'autonomie souhaitée. Dans ce cas, les gros consommateurs sont l'écran, le micro-contrôleur, le DAC et l'amplificateur.
+
+
+
+\subsection{Boutons}
+
+\subsection{Contrôle du volume}
+
+\clearpage
+\section{Design du boîtier}
