@@ -33,6 +33,7 @@ Le choix d'un DAC se fait principalement sur les caractéristiques suivantes :
     \item Frequence d'échantillonnage en Hz
 \end{itemize}
 
+\clearpage
 \subsection{Régulateur de tension}
 
 \subsubsection{Mesure de consommation du micro-contrôleur}
@@ -41,7 +42,28 @@ Dans le datasheet de l'ESP32-WROVER-E, Espressif ne spécifie pas la consommatio
 
 Pour se faire, un circuit avec un ESP32-DevKitC et un module de carte SD a été conçu sur breadbord. Ensuite, un simple code va se connecter en Bluetooth à une enceinte, lire un fichier .WAV depuis la carte SD et diffuser la musique via Bluetooth à l'enceinte. La mesure du courant sera faite avec ampèremètre numérique "Power Profiler Kit II" de chez Nordic Semiconductors. \\
 
-Voici la mesure
+Voici la mesure complète :
+
+\fig[H, width=1\textwidth]{Mesure de courant - ESP32-DevKitC - Mesure complète}{MesureCourantDevkit_30s.jpg}
+
+Il est immédiatement visible le moment à partir duquel le micro-contrôleur s'est connecté à l'enceinte et a commencé à transmettre la musique via Bluetooth.
+
+Afin de dimensionner correctement le régulateur de tension, la consommation lorsque le streaming via Bluetooth est activé est la plus intéressante car c'est la plus élevée. Voici une mesure sur un interval de temps beaucoup plus court :
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{\assetsdir/MesureCourantDevkit_Streaming_Zoom_Constant.jpg}
+        \caption{Mesure zoomée}
+    \end{subfigure}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{\assetsdir/MesureCourantDevkit_Streaming_Zoom_Peak.jpg}
+        \caption{Mesure zoomée - Pic}
+    \end{subfigure}
+    \caption{Mesure de courant - ESP32-DevKitC - Mesures zoomées}
+\end{figure}
 
 
 \subsubsection{Consommation totale}

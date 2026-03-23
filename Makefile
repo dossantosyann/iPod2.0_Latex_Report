@@ -13,8 +13,13 @@ FIGS_SVG=$(patsubst %.svg, $(BUILDDIR)/%.svg.pdf, $(SVGS))
 FIGS_DIO=$(patsubst %.drawio, $(BUILDDIR)/%.drawio.pdf, $(DIOS))
 FIGS_PDF=$(patsubst %.pdf, $(BUILDDIR)/%.pdf, $(PDFS))
 FIGS_PY=$(patsubst %.py, $(BUILDDIR)/%.py.pdf, $(PYFS))
+JPGS=$(wildcard $(FIGDIR)/*.jpg)
+PNGS=$(wildcard $(FIGDIR)/*.png)
 
-FIGS=$(FIGS_SVG) $(FIGS_DIO) $(FIGS_PDF) $(FIGS_PY)
+FIGS_JPG=$(patsubst %.jpg, $(BUILDDIR)/%.jpg, $(JPGS))
+FIGS_PNG=$(patsubst %.png, $(BUILDDIR)/%.png, $(PNGS))
+
+FIGS=$(FIGS_SVG) $(FIGS_DIO) $(FIGS_PDF) $(FIGS_PY) $(FIGS_JPG) $(FIGS_PNG)
 
 BLUE=\033[1;34m
 GREEN=\033[1;32m
@@ -38,6 +43,12 @@ $(FIGS_DIO): $(BUILDDIR)/%.drawio.pdf: %.drawio | dirs
 	$(DRAWIO) --crop --export --format pdf --output $@ $< --disable-gpu --headless --no-sandbox
 
 $(FIGS_PDF): $(BUILDDIR)/%.pdf: %.pdf | dirs
+	cp $< $@
+
+$(FIGS_JPG): $(BUILDDIR)/%.jpg: %.jpg | dirs
+	cp $< $@
+
+$(FIGS_PNG): $(BUILDDIR)/%.png: %.png | dirs
 	cp $< $@
 
 dirs: $(BUILDDIR)
