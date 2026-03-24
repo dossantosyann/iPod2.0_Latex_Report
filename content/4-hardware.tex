@@ -2,10 +2,10 @@
 
 Des outils d'intelligence artificielle ont été utilisés dans ce chapitre pour :
 \begin{itemize}
+    \item La vérification de l'orthogrpahe et de la grammaire du chapitre.
     \item Facilier et accélérer la recherche de composants.
     \item La lecture de datasheet.
     \item La vérification de compatibilité entre les composants.
-    \item La vérification de l'orthogrpahe et de la grammaire du chapitre.
     \item La génération de code pour l'affichage de plots.
 \end{itemize}
 Toutes les réponses générée par IA ont été revérifiées manuellement.
@@ -35,6 +35,7 @@ Le choix d'un DAC se fait principalement sur les caractéristiques suivantes :
 
 \clearpage
 \subsection{Régulateur de tension}
+Pour choisir correctement le régulateur de tension 3.3 V du système, il est nécessaire de connaître la consommation de chaque composant alimenté par ce rail. Le composant le plus énergivore étant le micro-contrôleur ESP32, notamment lors du streaming Bluetooth, une mesure empirique a été réalisée pour déterminer sa consommation réelle dans les conditions d'utilisation du projet.
 
 \subsubsection{Mesure de consommation du micro-contrôleur}
 
