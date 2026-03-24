@@ -76,6 +76,131 @@ Voici la consommation maximale de ces composants selon le datasheet :
     \item Microcontrôleur ESP32 : $\sim$ Bonjour.
 \end{itemize}
 
+
+\clearpage
+\subsection{Régulateur de tension - CLAUDE}
+
+Pour choisir correctement le régulateur de tension 3.3\,V du système, il est nécessaire de connaître la consommation de chaque composant alimenté par ce rail. Le composant le plus énergivore étant le micro-contrôleur ESP32 --- notamment lors du streaming Bluetooth --- une mesure empirique a été réalisée pour déterminer sa consommation réelle dans les conditions d'utilisation du projet.
+
+\subsubsection{Mesure de consommation du micro-contrôleur}
+
+\paragraph{Justification de la mesure}
+
+La datasheet de l'ESP32-WROVER-E \cite{esp32_datasheet} fournit uniquement les consommations en mode Wi-Fi (Table~16), avec un pic maximal de 350\,mA en 802.11b TX à 19.5\,dBm et de 233\,mA en 802.11n TX. Or, le cas d'utilisation de ce projet --- lecture d'un fichier audio depuis une carte SD, décodage logiciel et streaming via Bluetooth Classic (profil A2DP) --- n'est pas couvert par ces spécifications. Une mesure empirique est donc indispensable pour obtenir une valeur de consommation représentative du cas d'utilisation réel.
+
+\paragraph{Banc de mesure}
+
+Le banc de mesure est constitué des éléments suivants :
+
+\begin{itemize}
+    \item Un ESP32-DevKitC monté sur breadboard, relié à un module de carte SD via SPI.
+    \item Le \textit{Power Profiler Kit II} (PPK~II) de Nordic Semiconductor, configuré en mode \textit{Source Meter} : il fournit une tension de 3.3\,V au DevKit et mesure simultanément le courant consommé avec une résolution temporelle de l'ordre de la microseconde.
+    \item Une enceinte Bluetooth appairée à l'ESP32.
+\end{itemize}
+
+Le firmware de test effectue les opérations suivantes : connexion Bluetooth A2DP à l'enceinte, lecture d'un fichier \texttt{.WAV} depuis la carte SD, décodage et transmission du flux audio via Bluetooth.
+
+\paragraph{Remarque importante} Le PPK~II alimente l'intégralité du DevKit ESP32-DevKitC, ce qui inclut le convertisseur USB-UART (CP2102/CH340) et la LED d'alimentation. Ces composants, absents du PCB final, consomment environ 20 à 30\,mA. La consommation mesurée est donc une surestimation de la consommation réelle du module ESP32 seul, ce qui va dans le sens de la sécurité pour le dimensionnement.
+
+\paragraph{Résultats}
+
+La figure~\ref{fig:mesure_30s} montre la mesure de courant sur 30 secondes. Le moment où le micro-contrôleur se connecte à l'enceinte et commence à transmettre la musique via Bluetooth est clairement identifiable par l'augmentation significative du courant.
+
+\fig[H, width=1\textwidth]{Mesure de courant -- ESP32-DevKitC -- Vue d'ensemble sur 30\,s}{MesureCourantDevkit_30s.jpg}
+\label{fig:mesure_30s}
+
+Deux régimes de fonctionnement distincts sont observables :
+
+\begin{itemize}
+    \item \textbf{Sans streaming Bluetooth} (lecture SD + attente de connexion) : courant moyen de 103.72\,mA, pic à 208.96\,mA.
+    \item \textbf{Avec streaming Bluetooth} (transmission A2DP active) : courant moyen de 136.60\,mA, pic à 320.93\,mA.
+\end{itemize}
+
+Afin de dimensionner correctement le régulateur de tension, la consommation lors du streaming via Bluetooth est la plus pertinente car c'est le mode de fonctionnement le plus énergivore. Les figures~\ref{fig:mesure_zoom} présentent un zoom sur ce régime :
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{\assetsdir/MesureCourantDevkit_Streaming_Zoom_Constant.jpg}
+        \caption{Zoom sur le régime constant ($\overline{I} = 173.92$\,mA, durée $\approx 2.83$\,ms)}
+        \label{fig:zoom_constant}
+    \end{subfigure}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{\assetsdir/MesureCourantDevkit_Streaming_Zoom_Peak.jpg}
+        \caption{Zoom sur un pic de transmission RF ($I_{peak} \approx 299$\,mA, durée $\approx 120\,\mu$s)}
+        \label{fig:zoom_peak}
+    \end{subfigure}
+    \caption{Mesure de courant -- ESP32-DevKitC -- Zooms pendant le streaming Bluetooth}
+    \label{fig:mesure_zoom}
+\end{figure}
+
+L'analyse des zooms révèle deux composantes dans le profil de consommation :
+
+\begin{itemize}
+    \item Un \textbf{courant de base} d'environ 170--180\,mA correspondant au fonctionnement du processeur (décodage audio, gestion SPI pour la carte SD, pile Bluetooth).
+    \item Des \textbf{pics de transmission RF} atteignant $\sim$\,300\,mA sur des durées très courtes ($\sim$\,120\,$\mu$s), correspondant aux bursts d'émission radio du Bluetooth Classic.
+\end{itemize}
+
+\paragraph{Cohérence avec la datasheet}
+La datasheet de l'ESP32-WROVER-E indique dans ses conditions opérationnelles recommandées (Table~14) un courant minimum $I_{VDD} \geq 500$\,mA pour l'alimentation externe. Le pic mesuré de $\sim$\,321\,mA est inférieur au pic Wi-Fi TX maximal de 350\,mA spécifié (802.11b, 1\,Mbps), ce qui est cohérent puisque le Bluetooth Classic utilise une puissance d'émission généralement inférieure au Wi-Fi.
+
+\paragraph{Synthèse de la mesure}
+
+Le tableau~\ref{tab:mesure_esp32} résume les valeurs retenues pour le dimensionnement :
+
+\begin{table}[H]
+    \centering
+    \caption{Récapitulatif de la consommation mesurée du DevKit ESP32}
+    \label{tab:mesure_esp32}
+    \begin{tabular}{l c c}
+        \hline
+        \textbf{Paramètre}                   & \textbf{Valeur} & \textbf{Source}    \\
+        \hline
+        Courant moyen (streaming BT)         & 136.60\,mA      & Mesuré (PPK~II)    \\
+        Courant pic (streaming BT)           & 320.93\,mA      & Mesuré (PPK~II)    \\
+        Courant pic max (Wi-Fi TX)           & 350\,mA         & Datasheet Table~16 \\
+        Courant min. alimentation recommandé & 500\,mA         & Datasheet Table~14 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+La valeur retenue pour le dimensionnement du module ESP32 est le \textbf{pic mesuré de 321\,mA}, arrondi à \textbf{350\,mA} pour inclure une marge de sécurité alignée sur le pire cas spécifié par la datasheet (Wi-Fi TX 802.11b).
+
+% =====================================================
+\subsubsection{Consommation totale sur le rail 3.3\,V}
+
+Tous les composants du système alimentés par le rail 3.3\,V sont recensés dans le tableau~\ref{tab:conso_totale}. Les valeurs maximales issues des datasheets respectives sont utilisées pour garantir un dimensionnement dans le pire cas.
+
+\begin{table}[H]
+    \centering
+    \caption{Bilan de consommation sur le rail 3.3\,V}
+    \label{tab:conso_totale}
+    \begin{tabular}{l c c l}
+        \hline
+        \textbf{Composant}            & \textbf{$I_{typ}$ (mA)} & \textbf{$I_{max}$ (mA)} & \textbf{Remarque}                       \\
+        \hline
+        ESP32-WROVER-E                & 137                     & 350                     & Mesuré + marge datasheet                \\
+        DAC TAD5212 (AVDD + IOVDD)    & 19                      & 25                      & Datasheet, DAC $\rightarrow$ HP, PLL on \\
+        Écran OLED NHD (VDD logique)  & ---                     & 5                       & Logique 1.8\,V via LDO interne          \\
+        Carte SD (lecture SPI)        & ---                     & 100                     & Pire cas, dépend de la carte            \\
+        Divers (pull-ups, LEDs, etc.) & ---                     & 20                      & Estimation                              \\
+        \hline
+        \textbf{Total}                &                         & \textbf{$\sim$\,500}    &                                         \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\paragraph{Note sur l'écran OLED} L'écran NHD-1.91-176176B nécessite une tension $V_{CC}$ = 17\,V pour le panneau OLED, qui sera fournie par un convertisseur boost séparé. Le courant de 60\,mA max (datasheet, 100\,\% pixels allumés) circule sur ce rail haute tension et non sur le rail 3.3\,V. Seule la logique ($V_{DD}$ = 1.8\,V) est alimentée depuis le rail basse tension, pour un courant de quelques milliampères.
+
+\paragraph{Conclusion pour le dimensionnement du régulateur}
+
+Le régulateur de tension 3.3\,V devra être capable de fournir un courant continu d'au minimum \textbf{500\,mA} avec des pics transitoires pouvant atteindre 350\,mA sur des durées de l'ordre de 120\,$\mu$s (bursts RF). Cette valeur est cohérente avec la recommandation d'Espressif ($I_{VDD} \geq 500$\,mA, Table~14 de la datasheet).
+
+Le choix du type de régulateur (LDO ou buck DC-DC) sera détaillé dans la section suivante et dépendra du compromis entre rendement énergétique, ondulation de sortie acceptable pour les composants RF, et espace disponible sur le PCB.
+
+\clearpage
 \subsection{Batterie}
 Pour déterminer la capacité de la batterie, il faut se baser sur la consommation maximale des gros consommateurs et de de l'autonomie souhaitée. Dans ce cas, les gros consommateurs sont l'écran, le micro-contrôleur, le DAC et l'amplificateur.
 
