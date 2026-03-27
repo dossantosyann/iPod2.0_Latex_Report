@@ -35,11 +35,11 @@ Le choix d'un DAC se fait principalement sur les caractéristiques suivantes :
 
 \clearpage
 \subsection{Régulateur de tension}
-Pour choisir correctement le régulateur de tension 3.3 V du système, il est nécessaire de connaître la consommation de chaque composant alimenté par ce rail. Le composant le plus énergivore étant le micro-contrôleur ESP32, notamment lors du streaming Bluetooth, une mesure empirique a été réalisée pour déterminer sa consommation réelle dans les conditions d'utilisation du projet.
+Pour choisir correctement le régulateur de tension 3.3 V du système, il est nécessaire de connaître la consommation de chaque composant alimenté par cette tension. Le composant le plus énergivore étant le micro-contrôleur ESP32, notamment lors du streaming Bluetooth, une mesure a été réalisée pour estimer sa consommation réelle dans les conditions d'utilisation du projet.
 
 \subsubsection{Mesure de consommation du micro-contrôleur}
 
-Dans le datasheet de l'ESP32-WROVER-E, Espressif ne spécifie pas la consommation du module lors de l'utilisation du Bluetooth pour diffuser une musique. Mais cette information étant essentielle pour choisir correctement le régulateur de tension 3.3 V du système et la capacité de la batterie, une simple mesure de courant a été effectuée. \\
+Dans le datasheet de l'ESP32-WROVER-E, Espressif ne spécifie pas la consommation du module lors de l'utilisation du Bluetooth pour diffuser une musique. Mais cette information étant essentielle pour choisir correctement le régulateur de tension 3.3 V du système et la capacité de la batterie, une mesure de courant a été effectuée. \\
 
 Pour se faire, un circuit avec un ESP32-DevKitC et un module de carte SD a été conçu sur breadbord. Ensuite, un simple code va se connecter en Bluetooth à une enceinte, lire un fichier .WAV depuis la carte SD et diffuser la musique via Bluetooth à l'enceinte. La mesure du courant sera faite avec ampèremètre numérique "Power Profiler Kit II" de chez Nordic Semiconductors. \\
 
@@ -87,7 +87,7 @@ Pour choisir correctement le régulateur de tension 3.3\,V du système, il est n
 
 \paragraph{Justification de la mesure}
 
-La datasheet de l'ESP32-WROVER-E \cite{esp32_datasheet} fournit uniquement les consommations en mode Wi-Fi (Table~16), avec un pic maximal de 350\,mA en 802.11b TX à 19.5\,dBm et de 233\,mA en 802.11n TX. Or, le cas d'utilisation de ce projet --- lecture d'un fichier audio depuis une carte SD, décodage logiciel et streaming via Bluetooth Classic (profil A2DP) --- n'est pas couvert par ces spécifications. Une mesure empirique est donc indispensable pour obtenir une valeur de consommation représentative du cas d'utilisation réel.
+La datasheet de l'ESP32-WROVER-E REF DATATASHEET fournit uniquement les consommations en mode Wi-Fi (Table~16), avec un pic maximal de 350\,mA en 802.11b TX à 19.5\,dBm et de 233\,mA en 802.11n TX. Or, le cas d'utilisation de ce projet --- lecture d'un fichier audio depuis une carte SD, décodage logiciel et streaming via Bluetooth Classic (profil A2DP) --- n'est pas couvert par ces spécifications. Une mesure empirique est donc indispensable pour obtenir une valeur de consommation représentative du cas d'utilisation réel.
 
 \paragraph{Banc de mesure}
 
@@ -107,8 +107,8 @@ Le firmware de test effectue les opérations suivantes : connexion Bluetooth A2D
 
 La figure~\ref{fig:mesure_30s} montre la mesure de courant sur 30 secondes. Le moment où le micro-contrôleur se connecte à l'enceinte et commence à transmettre la musique via Bluetooth est clairement identifiable par l'augmentation significative du courant.
 
-\fig[H, width=1\textwidth]{Mesure de courant -- ESP32-DevKitC -- Vue d'ensemble sur 30\,s}{MesureCourantDevkit_30s.jpg}
-\label{fig:mesure_30s}
+%\fig[H, width=1\textwidth]{Mesure de courant -- ESP32-DevKitC -- Vue d'ensemble sur 30\,s}{MesureCourantDevkit_30s.jpg}
+%\label{fig:mesure_30s}
 
 Deux régimes de fonctionnement distincts sont observables :
 
